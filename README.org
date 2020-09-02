@@ -2,8 +2,13 @@
 Paper regarding adsorption of amino acids onto graphene.
 
 * Structure
---root
- |--scripts   #Useful scripts
- |--figures   #Image files for the figures
- |--tables    #Tex files for the tables
- |--paper     #Tex files for the paper
+root
+
++-- _scripts   #Useful scripts \\
+| \\
++-- _figures   #Image files for the figures \\
+| \\
++-- _tables    #Tex files for the tables \\
+| \\
++-- _paper     #Tex files for the paper \\
+
