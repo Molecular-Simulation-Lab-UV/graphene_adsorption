@@ -1,0 +1,9 @@
+* graphene_adsorption_paper
+Paper regarding adsorption of amino acids onto graphene.
+
+* Structure
+--root
+ |--scripts   #Useful scripts
+ |--figures   #Image files for the figures
+ |--tables    #Tex files for the tables
+ |--paper     #Tex files for the paper
