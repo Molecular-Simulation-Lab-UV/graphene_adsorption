@@ -56,17 +56,37 @@ have been published \cite{Zheng_2003, Ge_2011, Zuo_2012, Chong_2015,
 
 MD simulations were performed using the GROMOS11 \cite{Riniker_2011,
   Schmid_2012} and the NAMD 2.14 simulation packages
-\cite{Phillips_2020}.
-Details of the simulations will be presented separately for each program.
+\cite{Phillips_2020}.  Details of the simulations will be presented
+separately for each program.
 
 \subsubsection{GROMOS}
 
 The SHAKE algorithm \cite{Ryckaert_1977} was employed to constrain all
 bonds to their reference values with a relative tolerance of
 $10^{-4}$, allowing for a time-step of 2 fs using the leapfrog
-algorithm \cite{Hockney_1977}.
-\subsubsection{NAMD}
+algorithm \cite{Hockney_1977}.  For water, the SPC model was used
+\cite{Berendsen_1981}.  Non-bonded interactions were computed using a
+triple range cut-off. Interactions within the short-range cut-off of
+0.8 nm were computed every time-step, from a pair-list that was
+generated every 5 steps.  At these time points, interactions between
+0.8 and 1.4 nm were also computed which were kept constant between
+these updates.  A reaction-field contribution was added to
+electrostatic interactions approximating for a homogeneous medium
+outside the 1.4 nm long-range cut-off, employing the relative
+permittivity of SPC water (61) \cite{Tironi_1995}. All interactions
+were calculated using the GROMOS 54a8 potential energy function, with
+all graphene atoms modeled as neutral sp$^2$ carbons \cite{Reif_2012}.
+After a steepest-descent minimization to remove bad contacts, all
+velocities were randomly assigned from a Maxwell-Boltzmann
+distribution at 298 K.  All simulations were run coupled to
+thermostats using the weak-coupling algorithm
+\cite{Berendsen_1984}. The solute, graphene and solvent atoms were
+independently coupled to different heat baths. Additionally, the
+graphene layer was coupled to separate baths for regulation of its
+center of mass motion and its rotational and internal degrees of
+freedom. This totaled 4 heat baths.
 
+\subsubsection{NAMD}
 
 
 
