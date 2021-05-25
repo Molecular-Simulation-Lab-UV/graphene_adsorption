@@ -46,13 +46,33 @@ have been published \cite{Zheng_2003, Ge_2011, Zuo_2012, Chong_2015,
 
 \section{Methods}
 
-\subsection{Umbrella Sampling}
+\subsection{Free Energy Methods}
 
-\subsection{Well Tempered Multiple Walk Metadynamics}
+\subsubsection{Umbrella Sampling}
+
+\subsubsection{Well-Tempered Multiple Walker Metadynamics}
 
 \subsection{Molecular Dynamics Simulation}
 
-\subsection{Quantum Mechanics / Molecular Mechanics}
+MD simulations were performed using the GROMOS11 \cite{Riniker_2011,
+  Schmid_2012} and the NAMD 2.14 simulation packages
+\cite{Phillips_2020}.
+Details of the simulations will be presented separately for each program.
+
+\subsubsection{GROMOS}
+
+The SHAKE algorithm \cite{Ryckaert_1977} was employed to constrain all
+bonds to their reference values with a relative tolerance of
+$10^{-4}$, allowing for a time-step of 2 fs using the leapfrog
+algorithm \cite{Hockney_1977}.
+\subsubsection{NAMD}
+
+
+
+
+% \subsection{Quantum Mechanics / Molecular Mechanics}
+% NAMD was used for QM/MM simulations due to it's hybrid simulation
+% implementation \cite{Melo_2018}
 
 \section{Results}
 
