@@ -48,6 +48,52 @@ have been published \cite{Zheng_2003, Ge_2011, Zuo_2012, Chong_2015,
 
 \subsection{Free Energy Methods}
 
+The Helmholtz free energy of adsorption of an amino acid onto a
+graphene layer ($\Delta A_{ads}$) can be obtained from the difference
+in free energy of the Adsorbed and Free states:
+
+\begin{equation}
+\label{eq:Adsorption}
+\Delta A^{ads} = A^{near} - A^{free}
+\end{equation}
+
+Where the near and free states are defined based on the
+distance between the graphene layer and the $\alpha-$carbon of the
+amino acid projected onto a vector normal to the graphene layer. For a
+graphene layer prepared along the XY plane, this is equivalent to the
+distance along the Z--axis. This distance will be defined as the
+reaction coordinate $\xi$. The cut-off ranges for the near and far
+states will be defined based on the PMFs (potentials of mean force)
+along $\xi$ of the amino acids, which can be found in the
+supplementary materials TODO.
+
+If the potential of mean force ($\mathrm{PMF}$) along $\xi$ has been
+estimated for the discrete states $\{\xi_1, \xi_2, ..., \xi_N \}$, the
+probability of a state $\xi_{j}$ can be estimated with:
+
+\begin{equation}
+\label{eq:A-from-PMF}
+p(\xi_j) = \frac{e^{-\beta~\mathrm{PMF}(\xi_j)}}{\sum_{i=1}^N e^{-\beta~\mathrm{PMF}(\xi_i)}}
+\end{equation}
+
+where $\beta$ is the thermodynamic beta ($\frac{1}{k_{B}T}$). To
+estimate the probability of a state with multiple possible $\xi$
+values, the numerator is replaced with a sum over the individual
+values of $\xi$. In this way, the probabilities of the adsorbed and
+free states can be estimated with:
+
+\begin{equation}
+\label{eq:Adsorbed}
+p(A) = \frac{\sum_{j \in A} e^{-\beta~\mathrm{PMF}(\xi_j)}}{\sum_{i=1}^N e^{-\beta~\mathrm{PMF}(\xi_i)}}
+\end{equation}
+\begin{equation}
+\label{eq:Adsorbed}
+p(F) = \frac{\sum_{j \in F} e^{-\beta~\mathrm{PMF}(\xi_j)}}{\sum_{i=1}^N e^{-\beta~\mathrm{PMF}(\xi_i)}}
+\end{equation}
+
+Knowing that the probability of a state
+
+
 \subsubsection{Umbrella Sampling}
 
 \subsubsection{Well-Tempered Multiple Walker Metadynamics}
@@ -87,6 +133,8 @@ center of mass motion and its rotational and internal degrees of
 freedom. This totaled 4 heat baths.
 
 \subsubsection{NAMD}
+
+
 
 
 
