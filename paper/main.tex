@@ -68,13 +68,31 @@ states will be defined based on the PMFs (potentials of mean force)
 along $\xi$ of the amino acids, which can be found in the
 supplementary materials \textcolor{red}{TODO}.
 
-If the potential of mean force ($\mathrm{PMF}$) along $\xi$ has been
-estimated for the discrete states $\{\xi_1, \xi_2, ..., \xi_N \}$, the
-probability of a state $\xi_{j}$ can be estimated with:
+The free energy of a state is related to the probability of the state
+via:
 
 \begin{equation}
-\label{eq:A-from-PMF}
-p(\xi_j) = \frac{e^{-\beta~\mathrm{PMF}(\xi_j)}}{\sum_{i=1}^N e^{-\beta~\mathrm{PMF}(\xi_i)}}
+\label{eq:A-from-p}
+A^i = - k_B T \ln (p_i)
+\end{equation}
+
+Where $k_B$ is Boltzmann's constant and T is the
+temperature. Replacing Eq.~(\ref{eq:A-from-p}) in
+Eq.~(\ref{eq:Adsorption}) we can relate the free energy of adsorption
+to the probabilities of the near and free states:
+
+\begin{equation}
+\label{eq:Aads-from-p}
+\Delta A^{ads} = - k_B T \ln (\frac{p_{near}}{p_{free}})
+\end{equation}
+
+If the potential PMF along $\xi$ has been estimated for the discrete
+states $\{\xi_1, \xi_2, ..., \xi_N \}$, the probability of a state
+$\xi_{j}$ can be estimated with:
+
+\begin{equation}
+\label{eq:p-from-PMF}
+p_{\xi_j} = \frac{e^{-\beta~\mathrm{PMF}(\xi_j)}}{\sum_{i=1}^N e^{-\beta~\mathrm{PMF}(\xi_i)}}
 \end{equation}
 
 where $\beta$ is the thermodynamic beta ($\frac{1}{k_{B}T}$). To
@@ -84,16 +102,25 @@ values of $\xi$. In this way, the probabilities of the adsorbed and
 free states can be estimated with:
 
 \begin{equation}
-\label{eq:Adsorbed}
-p(A) = \frac{\sum_{j \in A} e^{-\beta~\mathrm{PMF}(\xi_j)}}{\sum_{i=1}^N e^{-\beta~\mathrm{PMF}(\xi_i)}}
+\label{eq:p-near}
+p_{near} = \frac{\sum_{j \in near} e^{-\beta~\mathrm{PMF}(\xi_j)}}{\sum_{i=1}^N e^{-\beta~\mathrm{PMF}(\xi_i)}}
 \end{equation}
 \begin{equation}
-\label{eq:Adsorbed}
-p(F) = \frac{\sum_{j \in F} e^{-\beta~\mathrm{PMF}(\xi_j)}}{\sum_{i=1}^N e^{-\beta~\mathrm{PMF}(\xi_i)}}
+\label{eq:p-free}
+p_{free} = \frac{\sum_{j \in free} e^{-\beta~\mathrm{PMF}(\xi_j)}}{\sum_{i=1}^N e^{-\beta~\mathrm{PMF}(\xi_i)}}
 \end{equation}
 
-Knowing that the probability of a state
+Replacing Eqs.~(ref{eq:p-near})~and~(\ref{eq:p-free}) in
+Eq.\~(\ref{eq:Aads-from-p}) we have an expression to calculate the
+free energy of adsorption from a PMF of $\xi$, regardless of how the
+PMF was obtained:
 
+\begin{equation}
+\label{eq:Aads-from-PMF}
+\Delta A^{ads} = - k_B T \ln \left(\frac{\sum_{j \in near} e^{-\beta~\mathrm{PMF}(\xi_j)}}{\sum_{k \in free} e^{-\beta~\mathrm{PMF}(\xi_k)}}\right)
+\end{equation}
+
+On the following sections, two different methods used to obtain a PMF along $\xi$ will be described.
 
 \subsubsection{Umbrella Sampling}
 
