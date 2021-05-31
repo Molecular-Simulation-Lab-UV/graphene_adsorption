@@ -6,6 +6,7 @@ methods...). Commits every paragraph and when stopping for the day.
 
 ** Structure
 
+- data: data used for figures, scripts and tables may reference these files
 - figures: For all figures
 - paper: .tex files for the paper
   + main.tex: LaTeX file
