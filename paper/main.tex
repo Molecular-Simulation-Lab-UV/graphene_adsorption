@@ -78,15 +78,16 @@ A^i = - k_B T \ln (p_i)
 
 Where $k_B$ is Boltzmann's constant and T is the
 temperature. Replacing Eq.~(\ref{eq:A-from-p}) in
-Eq.~(\ref{eq:Adsorption}) we can relate the free energy of adsorption
-to the probabilities of the near and free states:
+Eq.~(\ref{eq:Adsorption}) we get an expression to calculate the free
+energy of adsorption from the probabilities of the near and free
+states:
 
 \begin{equation}
 \label{eq:Aads-from-p}
 \Delta A^{ads} = - k_B T \ln (\frac{p_{near}}{p_{free}})
 \end{equation}
 
-If the potential PMF along $\xi$ has been estimated for the discrete
+If the PMF along $\xi$ has been estimated for the discrete
 states $\{\xi_1, \xi_2, ..., \xi_N \}$, the probability of a state
 $\xi_{j}$ can be estimated with:
 
@@ -120,6 +121,12 @@ PMF was obtained:
 \Delta A^{ads} = - k_B T \ln \left(\frac{\sum_{j \in near} e^{-\beta~\mathrm{PMF}(\xi_j)}}{\sum_{k \in free} e^{-\beta~\mathrm{PMF}(\xi_k)}}\right)
 \end{equation}
 
+or, equivalently:
+
+\begin{equation}
+\label{eq:Aads-from-PMF-p}
+\Delta A^{ads} = - k_B T \ln \left(\frac{\sum_{j \in near} p_{\xi_j}}{\sum_{k \in free} p_{\xi_k}}\right)
+\end{equation}
 On the following sections, two different methods used to obtain a PMF along $\xi$ will be described.
 
 \subsubsection{Umbrella Sampling}
