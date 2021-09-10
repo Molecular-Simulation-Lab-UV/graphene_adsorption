@@ -58,15 +58,16 @@ in free energy of the Adsorbed and Free states:
 \Delta A^{ads} = A^{near} - A^{free}
 \end{equation}
 
-Where the near and free states are defined based on the
-distance between the graphene layer and the $\alpha-$carbon of the
-amino acid projected onto a vector normal to the graphene layer. For a
-graphene layer prepared along the XY plane, this is equivalent to the
-distance along the Z--axis. This distance will be defined as the
-reaction coordinate $\xi$. The cut-off ranges for the near and far
-states will be defined based on the PMFs (potentials of mean force)
-along $\xi$ of the amino acids, which can be found in the
-supplementary materials \textcolor{red}{TODO}.
+Where the near and free states are defined based on the reaction
+coordinate $\xi(\mathbf{r})$. $\xi(\mathbf{r})$ depends on the
+coordinates of the system ($\mathbf{r}$) and is equal to the distance
+between the graphene layer and the $\alpha-$carbon of the amino acid
+projected onto a vector normal to the graphene layer. For a graphene
+layer prepared along the XY plane, this is equivalent to the distance
+along the Z--axis. The cut-off ranges for the near and far states will
+be defined based on the PMFs (potentials of mean force) along $\xi(\mathbf{r})$ of
+the amino acids, which can be found in the supplementary materials
+\textcolor{red}{TODO}.
 
 The free energy of a state is related to the probability of the state
 via:
@@ -127,9 +128,49 @@ or, equivalently:
 \label{eq:Aads-from-PMF-p}
 \Delta A^{ads} = - k_B T \ln \left(\frac{\sum_{j \in near} p_{\xi_j}}{\sum_{k \in free} p_{\xi_k}}\right)
 \end{equation}
+
 On the following sections, two different methods used to obtain a PMF along $\xi$ will be described.
 
 \subsubsection{Umbrella Sampling}
+
+Umbrella sampling\cite{Torrie_1977} was used to obtain the PMF along
+reaction coordinate by sampling multiple windows of $\xi$. Each sample
+was obtained from a simulation where the Hamiltonian included the
+following potential:
+
+\begin{equation}
+\label{eq:umbrella-potential}
+\mathcal{V}^{US}(\mathbf{r}, k^{US}, \xi^0) = \frac{1}{2}k^{US}[\xi^0
+- \xi(\mathbf{r})]^2
+\end{equation}
+
+where $\xi^0$ is the center of the sampling window and $k^{US}$ is an
+harmonic constant. For simulations of amino acids over pristine
+graphene $\xi^0$ took values from 0.3 to 1.5 nm in 0.05 nm steps, while $k^{US}$ took
+values from 1000 to 12000 [$kJ \cdot mol \cdot nm^2$] adjusted to
+ensure a good overlap in the sampling of different windows while
+retaining a high sampling of the window's center.
+
+The biased samples of $\xi$ obtained from these windows were used
+to obtain the unbiased PMF using an implementation of the Weighted Histogram Analysis
+Method (WHAM)\cite{Kumar_1992, Kumar_1995} developed by
+\citet{WHAM}. This implementation of WHAM outputs --in addition to the
+free energy/probability along $\xi$-- the (dimensionless) free energy
+of each window, $F_i$. Knowing the $F_i$ of every we can unbias our
+samples of any property $T$, to get an average for the window:
+
+\begin{equation}
+\label{eq:WHAM-unbias}
+\langle T(\xi') \rangle = \frac{\sum_i^{S} \sum_j^{N_i} T_{i, j}
+  e^{-\beta[F_i - \mathcal{V}^{US}(\mathbf{r_j})]}
+  \delta \xi_{i, j}}{\sum_i^{S} \sum_j^{N_i}
+  e^{-\beta[F_i - \mathcal{V}^{US}(\mathbf{r_j})]}
+  \delta \xi_{i, j}}
+\end{equation}
+
+where $$
+
+
 
 \subsubsection{Well-Tempered Multiple Walker Metadynamics}
 
