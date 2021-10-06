@@ -134,7 +134,7 @@ On the following sections, two different methods used to obtain a PMF along $\xi
 \subsubsection{Umbrella Sampling}
 
 Umbrella sampling\cite{Torrie_1977} was used to obtain the PMF along
-reaction coordinate by sampling multiple windows of $\xi$. Each sample
+reaction coordinate by sampling multiple windows along $\xi$. Each sample
 was obtained from a simulation where the Hamiltonian included the
 following potential:
 
@@ -168,11 +168,11 @@ samples of any property $T$, to get an average for the window:
   \delta \xi_{i, j}}
 \end{equation}
 
-where $$
+where
 
 
 
-\subsubsection{Well-Tempered Multiple Walker Metadynamics}
+%\subsubsection{Well-Tempered Multiple Walker Metadynamics}
 
 \subsection{Molecular Dynamics Simulation}
 
@@ -208,7 +208,28 @@ graphene layer was coupled to separate baths for regulation of its
 center of mass motion and its rotational and internal degrees of
 freedom. This totaled 4 heat baths.
 
-\subsubsection{NAMD}
+Graphene sheets with sides of length $4.94$ and $4.87$ nm and
+bond-length of $0.139$ nm were generated with VMD\cite{Humphrey_1996}
+using its nanotube builder plugin.
+
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=\columnwidth]{/home/mbarria/Documents/Papers/graphene_adsorption_paper/figures/Graphene.png}}
+\caption[]{\label{fig:system-pristine} Example of a simulated
+  system. A Phenylalanine molecule is placed above a layer of pristine
+  graphene inside a water-filled rectangular box. Carbon atoms are
+  depicted in gray.}
+\end{figure}
+
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=\columnwidth]{/home/mbarria/Documents/Papers/graphene_adsorption_paper/figures/Graphene_Oxide.png}}
+\caption[]{\label{fig:system-oxide} (a) A simulated system where the
+  graphene layer is oxidized. Carbon atoms are depicted in cyan, while
+oxygen and hydrogen atoms are depicted in red and white,
+respectively. (b) A section of the graphene oxide layer, showing the
+distribution of the hydroxyl groups.}
+\end{figure}
+
+%\subsubsection{NAMD}
 
 
 
