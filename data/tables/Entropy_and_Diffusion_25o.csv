@@ -1,0 +1,4 @@
+#Table 4: Schlitter Entropy and Diffusion coefficient Differences
+Name,dD,err,dS_{chli},err
+Arginine_H+,-0.0207745,0.00045590157929096934,-7.543098799228666,0.005534705376588641
+Asparagine,-0.012723,0.0002693004641659572,nan,nan
