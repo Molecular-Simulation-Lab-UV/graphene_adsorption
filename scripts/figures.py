@@ -7,7 +7,7 @@ table = "../data/tables/Free_Energy_Decomposition.csv"
 #table = "/home/mbarria/donelias/AA_GO0US/tables/2021_08_28/Table1.csv"
 #output
 output = "../figures"
-imagename = "Differences_by_name_and_weight"
+imagename = "Differences_by_names_and_weight"
 # separate figures?
 SEPARATE = False
 # How to group amino acids
