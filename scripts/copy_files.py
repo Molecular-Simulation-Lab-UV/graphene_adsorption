@@ -12,8 +12,15 @@ def copycsv(original, new):
         lines = io.readlines()
     with open(new, 'w') as io:
         for line in lines:
-            if line[0] != '#':
-                io.write(line)
+            if line[0] != '#' and "Water" not in line:
+                newline = line.replace("_", " ")
+                newline = newline.replace("Acid,", "Acid (-),")
+                newline = newline.replace("Acid H+", "Acid")
+                newline = newline.replace("2H+", "(+)")
+                newline = newline.replace(" H+ ND1", "")
+                newline = newline.replace("Cysteine H+", "Cysteine")
+                newline = newline.replace("H+", "(+)")
+                io.write(newline)
 
 target = "/home/mbarria/Dropbox/Papers/graphene_adsorption_paper/data"
 # 1.- Tables
