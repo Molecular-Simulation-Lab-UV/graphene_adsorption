@@ -34,13 +34,13 @@ copycsv(f"{source}/Table4.csv", f"{target}/tables/Entropy_and_Diffusion.csv")
 copycsv(f"{source}/Table5.csv", f"{target}/tables/SASA.csv")
 
 # 25%
-source = "/home/mbarria/don-elias1/AA_GO25US/tables/2021_12_09_SASA"
+source = "/home/mbarria/don-elias1/AA_GO25US/tables/2021_09_13"
 
 copycsv(f"{source}/Table1.csv", f"{target}/tables/Free_Energy_Decomposition_25o.csv")
 copycsv(f"{source}/Table2.csv", f"{target}/tables/Energy_Decomposition_25o.csv")
 copycsv(f"{source}/Table3.csv", f"{target}/tables/Internal_and_External_Energy_25o.csv")
 copycsv(f"{source}/Table4.csv", f"{target}/tables/Entropy_and_Diffusion_25o.csv")
-copycsv(f"{source}/Table5.csv", f"{target}/tables/SASA_25o.csv")
+#copycsv(f"{source}/Table5.csv", f"{target}/tables/SASA_25o.csv")
 
 # Helix 5-Ala
 

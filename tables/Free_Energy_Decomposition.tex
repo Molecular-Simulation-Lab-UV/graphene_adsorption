@@ -1,0 +1,34 @@
+\documentclass{standalone}
+
+\usepackage{csvsimple}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{booktabs}
+
+\begin{document}
+% \begin{tabular}{l|c|c|c}
+%   \textbf{Amino acid} & $\Delta A_{ads}$ & $\Delta E_{ads}$ & $T\Delta S_{ads}$
+%   \csvreader[head to column names]{../data/tables/Free_Energy_Decomposition.csv}{}
+%   {\\\hline\Name & \dA~$\pm$~\csvcoliii & \dE & \TdS}% specify your coloumns here
+% \end{tabular}
+
+\newcommand{\myround}{\tablenum[round-precision=1, round-mode=places,
+   table-format=2.1]}
+\csvreader[
+  head to column names,
+  before reading = \begin{center}\sisetup{table-number-alignment=center},
+  tabular        = {lccc},
+  table head     = \toprule \textbf{Amino acid} & $\Delta A$ &
+  $\Delta E$ & $T \Delta S$ & \\ \midrule,
+  table foot     = \bottomrule,
+  after reading  = \end{center}
+]{/home/mbarria/Dropbox/Papers/graphene_adsorption_paper/data/tables/Free_Energy_Decomposition.csv}{3=\Aerr, 5=\Eerr, 7=\Serr}{%
+   \Name & \myround\dA~$\pm$\myround\Aerr & \myround\dE~$\pm$\myround\Eerr & \myround\TdS$~\pm$\myround\Serr &
+}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
