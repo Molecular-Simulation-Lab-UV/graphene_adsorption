@@ -8,6 +8,7 @@ bottom=2.0cm]{geometry}
 \usepackage{hyperref}
 \usepackage{graphicx}
 \graphicspath{{./figures}{../figures}}
+\usepackage{xcolor}
 
 %\usepackage{epstopdf}
 \usepackage{epstopdf}
@@ -47,9 +48,84 @@ have been published \cite{Zheng_2003, Ge_2011, Zuo_2012, Chong_2015,
 
 \section{Methods}
 
-\subsection{Umbrella Sampling}
+\subsection{Free Energy Methods}
 
-\subsection{Well Tempered Multiple Walk Metadynamics}
+The Helmholtz free energy of adsorption of an amino acid onto a
+graphene layer ($\Delta A_{ads}$) can be obtained from the difference
+in free energy of the Adsorbed and Free states:
+
+\begin{equation}
+\label{eq:Adsorption}
+\Delta A^{ads} = A^{near} - A^{free}
+\end{equation}
+
+Where the near and free states are defined based on the
+distance between the graphene layer and the $\alpha-$carbon of the
+amino acid projected onto a vector normal to the graphene layer. For a
+graphene layer prepared along the XY plane, this is equivalent to the
+distance along the Z--axis. This distance will be defined as the
+reaction coordinate $\xi$. The cut-off ranges for the near and far
+states will be defined based on the PMFs (potentials of mean force)
+along $\xi$ of the amino acids, which can be found in the
+supplementary materials \textcolor{red}{TODO}.
+
+The free energy of a state is related to the probability of the state
+via:
+
+\begin{equation}
+\label{eq:A-from-p}
+A^i = - k_B T \ln (p_i)
+\end{equation}
+
+Where $k_B$ is Boltzmann's constant and T is the
+temperature. Replacing Eq.~(\ref{eq:A-from-p}) in
+Eq.~(\ref{eq:Adsorption}) we can relate the free energy of adsorption
+to the probabilities of the near and free states:
+
+\begin{equation}
+\label{eq:Aads-from-p}
+\Delta A^{ads} = - k_B T \ln (\frac{p_{near}}{p_{free}})
+\end{equation}
+
+If the potential PMF along $\xi$ has been estimated for the discrete
+states $\{\xi_1, \xi_2, ..., \xi_N \}$, the probability of a state
+$\xi_{j}$ can be estimated with:
+
+\begin{equation}
+\label{eq:p-from-PMF}
+p_{\xi_j} = \frac{e^{-\beta~\mathrm{PMF}(\xi_j)}}{\sum_{i=1}^N e^{-\beta~\mathrm{PMF}(\xi_i)}}
+\end{equation}
+
+where $\beta$ is the thermodynamic beta ($\frac{1}{k_{B}T}$). To
+estimate the probability of a state with multiple possible $\xi$
+values, the numerator is replaced with a sum over the individual
+values of $\xi$. In this way, the probabilities of the adsorbed and
+free states can be estimated with:
+
+\begin{equation}
+\label{eq:p-near}
+p_{near} = \frac{\sum_{j \in near} e^{-\beta~\mathrm{PMF}(\xi_j)}}{\sum_{i=1}^N e^{-\beta~\mathrm{PMF}(\xi_i)}}
+\end{equation}
+\begin{equation}
+\label{eq:p-free}
+p_{free} = \frac{\sum_{j \in free} e^{-\beta~\mathrm{PMF}(\xi_j)}}{\sum_{i=1}^N e^{-\beta~\mathrm{PMF}(\xi_i)}}
+\end{equation}
+
+Replacing Eqs.~(\ref{eq:p-near})~and~(\ref{eq:p-free}) in
+Eq.\~(\ref{eq:Aads-from-p}) we have an expression to calculate the
+free energy of adsorption from a PMF of $\xi$, regardless of how the
+PMF was obtained:
+
+\begin{equation}
+\label{eq:Aads-from-PMF}
+\Delta A^{ads} = - k_B T \ln \left(\frac{\sum_{j \in near} e^{-\beta~\mathrm{PMF}(\xi_j)}}{\sum_{k \in free} e^{-\beta~\mathrm{PMF}(\xi_k)}}\right)
+\end{equation}
+
+On the following sections, two different methods used to obtain a PMF along $\xi$ will be described.
+
+\subsubsection{Umbrella Sampling}
+
+\subsubsection{Well-Tempered Multiple Walker Metadynamics}
 
 \subsection{Molecular Dynamics Simulation}
 
@@ -69,7 +145,43 @@ have been published \cite{Zheng_2003, Ge_2011, Zuo_2012, Chong_2015,
   oxidation pattern. (C in gray, O in red, H in white)}
 \end{figure}
 
-\subsection{Quantum Mechanics / Molecular Mechanics}
+MD simulations were performed using the GROMOS11 \cite{Riniker_2011,
+  Schmid_2012} and the NAMD 2.14 simulation packages
+\cite{Phillips_2020}.  Details of the simulations will be presented
+separately for each program.
+
+\subsubsection{GROMOS}
+
+The SHAKE algorithm \cite{Ryckaert_1977} was employed to constrain all
+bonds to their reference values with a relative tolerance of
+$10^{-4}$, allowing for a time-step of 2 fs using the leapfrog
+algorithm \cite{Hockney_1977}.  For water, the SPC model was used
+\cite{Berendsen_1981}.  Non-bonded interactions were computed using a
+triple range cut-off. Interactions within the short-range cut-off of
+0.8 nm were computed every time-step, from a pair-list that was
+generated every 5 steps.  At these time points, interactions between
+0.8 and 1.4 nm were also computed which were kept constant between
+these updates.  A reaction-field contribution was added to
+electrostatic interactions approximating for a homogeneous medium
+outside the 1.4 nm long-range cut-off, employing the relative
+permittivity of SPC water (61) \cite{Tironi_1995}. All interactions
+were calculated using the GROMOS 54a8 potential energy function, with
+all graphene atoms modeled as neutral sp$^2$ carbons \cite{Reif_2012}.
+After a steepest-descent minimization to remove bad contacts, all
+velocities were randomly assigned from a Maxwell-Boltzmann
+distribution at 298 K.  All simulations were run coupled to
+thermostats using the weak-coupling algorithm
+\cite{Berendsen_1984}. The solute, graphene and solvent atoms were
+independently coupled to different heat baths. Additionally, the
+graphene layer was coupled to separate baths for regulation of its
+center of mass motion and its rotational and internal degrees of
+freedom. This totaled 4 heat baths.
+
+
+% \subsection{Quantum Mechanics / Molecular Mechanics}
+% NAMD was used for QM/MM simulations due to it's hybrid simulation
+% implementation \cite{Melo_2018}
+
 
 \section{Results}
 
