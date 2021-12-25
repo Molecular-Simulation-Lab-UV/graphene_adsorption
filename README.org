@@ -9,7 +9,7 @@ methods...). Commits every paragraph and when stopping for the day.
 - data: data used for figures, scripts and tables may reference these files
   + pmfs: PMF(\xi) for all amino acids over graphene
   + tables: .csv files for
-    * Free energy decomposition ($\Delta A$, $\Delta E$, $T\Delta S$)
+    * Free energy decomposition (\Delta A, \Delta E, T\Delta S)
     * Energy decomposition (into VdW and CRF)
     * Entropy (schlitter/quasi-harmonic) and Diffusion coefficientes
     * SASA
