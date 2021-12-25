@@ -6,11 +6,18 @@ methods...). Commits every paragraph and when stopping for the day.
 
 ** Structure
 
-- data: (future) data used for figures, scripts and tables may reference these files
+- data: data used for figures, scripts and tables may reference these files
+  + pmfs: PMF(\xi) for all amino acids over graphene
+  + tables: .csv files for
+    * Free energy decomposition ($\Delta A$, $\Delta E$, $T\Delta S$)
+    * Energy decomposition (into VdW and CRF)
+    * Entropy (schlitter/quasi-harmonic) and Diffusion coefficientes
+    * SASA
 - figures: For all figures
 - paper: .tex files for the paper
   + main.tex: LaTeX file
   + refs.bib: Reference file
-- scripts: (future) any relevant script for the creation of figures
-- tables: (future) any tables as separate .tex files to remove clutter
+- scripts: any relevant script for the creation of figures (there is
+  also a "copy files" script but it is only expected to work on my computer)
+- tables: any tables as separate .tex files to remove clutter
   in main.tex
