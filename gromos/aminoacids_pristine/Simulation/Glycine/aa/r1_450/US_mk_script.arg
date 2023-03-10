@@ -1,0 +1,13 @@
+@sys	US_aa
+@bin	/home/rhonorato/opt/md++-1.4.0/bin/md
+@version	md++
+@dir	/home/rhonorato/US_aa/Glycine/aa/r1_450
+@files
+  topo	../../Glycine_aa_graphene_54a8.top
+  input	aa_US.imd
+  coord	../../Glycine_aa_graphene_h2o_54a8.cnf
+  posresspec	../../Glycine_aa_graphene_h2o_54a8.por
+  refpos	../../Glycine_aa_graphene_h2o_54a8.rpr
+  disres	../Glycine_aa_graphene_h2o_54a8_1_450.dsr
+@template	/home/rhonorato/US_aa/mkscript_mms_leftraru_openMP.lib
+@script	1 25

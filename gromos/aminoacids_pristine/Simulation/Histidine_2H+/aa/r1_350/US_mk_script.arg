@@ -1,0 +1,13 @@
+@sys	US_aa
+@bin	/home/rhonorato/opt/md++-1.4.0/bin/md
+@version	md++
+@dir	/home/rhonorato/US_aa/Histidine_2H+/aa/r1_350
+@files
+  topo	../../Histidine_2H+_aa_Cl_graphene_54a8.top
+  input	aa_US.imd
+  coord	../../Histidine_2H+_aa_1Cl_graphene_h2o_54a8.cnf
+  posresspec	../../Histidine_2H+_aa_1Cl_graphene_h2o_54a8.por
+  refpos	../../Histidine_2H+_aa_1Cl_graphene_h2o_54a8.rpr
+  disres	../Histidine_2H+_aa_1Cl_graphene_h2o_54a8_1_350.dsr
+@template	/home/rhonorato/US_aa/mkscript_mms_leftraru_openMP.lib
+@script	1 25

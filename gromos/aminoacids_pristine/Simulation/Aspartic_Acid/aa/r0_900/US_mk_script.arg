@@ -1,0 +1,13 @@
+@sys	US_aa
+@bin	/home/rhonorato/opt/md++-1.4.0/bin/md
+@version	md++
+@dir	/home/rhonorato/US_aa/Aspartic_Acid/aa/r0_900
+@files
+  topo	../../Aspartic_Acid_aa_Na_graphene_54a8.top
+  input	aa_US.imd
+  coord	../../Aspartic_Acid_aa_1Na_graphene_h2o_54a8.cnf
+  posresspec	../../Aspartic_Acid_aa_1Na_graphene_h2o_54a8.por
+  refpos	../../Aspartic_Acid_aa_1Na_graphene_h2o_54a8.rpr
+  disres	../Aspartic_Acid_aa_1Na_graphene_h2o_54a8_0_900.dsr
+@template	/home/rhonorato/US_aa/mkscript_mms_leftraru_openMP.lib
+@script	1 25

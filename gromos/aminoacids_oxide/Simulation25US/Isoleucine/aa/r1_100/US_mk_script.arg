@@ -1,0 +1,13 @@
+@sys	US_aa
+@bin	/opt/md++1.41/bin/md
+@version	md++
+@dir	/home1/mbarria/AA_GO25US/Isoleucine/aa/r1_100
+@files
+  topo	../../Isoleucine_aa_graphene_54a8.top
+  input	aa_US.imd
+  coord	../../Isoleucine_aa_graphene_h2o_54a8.cnf
+  posresspec	../../Isoleucine_aa_graphene_h2o_54a8.por
+  refpos	../../Isoleucine_aa_graphene_h2o_54a8.rpr
+  disres	../Isoleucine_aa_graphene_h2o_54a8_1_100.dsr
+@template	/home1/mbarria/AA_GO25US/mkscript_mms_leftraru_openMP.lib
+@script	1 25

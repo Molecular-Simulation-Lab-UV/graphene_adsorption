@@ -1,0 +1,7 @@
+TITLE
+Distance restraint specification for umbrella sampling
+END
+DISTANCERESSPEC
+#	DISH	DISC
+	0.1	0.139
+#	i j k l type	i j k l type	r0	w0	rahn

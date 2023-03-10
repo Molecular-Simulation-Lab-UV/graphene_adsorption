@@ -1,0 +1,13 @@
+@sys	US_aa
+@bin	/home/rhonorato/opt/md++-1.4.0/bin/md
+@version	md++
+@dir	/home/rhonorato/US_aa/Phenylalanine/aa/r0_300
+@files
+  topo	../../Phenylalanine_aa_graphene_54a8.top
+  input	aa_US.imd
+  coord	../../Phenylalanine_aa_graphene_h2o_54a8.cnf
+  posresspec	../../Phenylalanine_aa_graphene_h2o_54a8.por
+  refpos	../../Phenylalanine_aa_graphene_h2o_54a8.rpr
+  disres	../Phenylalanine_aa_graphene_h2o_54a8_0_300.dsr
+@template	/home/rhonorato/US_aa/mkscript_mms_leftraru_openMP.lib
+@script	1 25

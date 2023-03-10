@@ -1,0 +1,13 @@
+@sys	US_aa
+@bin	/home/rhonorato/opt/md++-1.4.0/bin/md
+@version	md++
+@dir	/home/rhonorato/US_aa/Arginine_H+/aa/r0_300
+@files
+  topo	../../Arginine_H+_aa_Cl_graphene_54a8.top
+  input	aa_US.imd
+  coord	../../Arginine_H+_aa_1Cl_graphene_h2o_54a8.cnf
+  posresspec	../../Arginine_H+_aa_1Cl_graphene_h2o_54a8.por
+  refpos	../../Arginine_H+_aa_1Cl_graphene_h2o_54a8.rpr
+  disres	../Arginine_H+_aa_1Cl_graphene_h2o_54a8_0_300.dsr
+@template	/home/rhonorato/US_aa/mkscript_mms_leftraru_openMP.lib
+@script	1 25

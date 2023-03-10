@@ -1,0 +1,15 @@
+REMARK original generated coordinate pdb file
+ATOM      1  N   CYS X   1      -0.132   2.450  -0.112  1.00  0.00      1    N
+ATOM      2  C   CYS X   1      -0.626   1.113  -2.112  1.00  0.00      1    C
+ATOM      3  O   CYS X   1       0.374   0.682  -2.681  1.00  0.00      1    O
+ATOM      4  CA  CYS X   1      -0.701   1.208  -0.598  1.00  0.00      1    C
+ATOM      5  CB  CYS X   1      -2.131   1.145  -0.150  1.00  0.00      1    C
+ATOM      6  HA  CYS X   1      -0.195   0.452  -0.182  1.00  0.00      1    H
+ATOM      7  HC1 CYS X   1      -1.424   1.416  -2.634  1.00  0.00      1    H
+ATOM      8  HT1 CYS X   1       0.220   3.108  -0.747  1.00  0.00      1    H
+ATOM      9  HT2 CYS X   1      -0.767   3.067   0.352  1.00  0.00      1    H
+ATOM     10  HB1 CYS X   1      -2.374   2.207  -0.379  1.00  0.00      1    H
+ATOM     11  HB2 CYS X   1      -2.434   0.560  -1.047  1.00  0.00      1    H
+ATOM     12  SG  CYS X   1      -2.928   0.608   1.397  1.00  0.00      1    S
+ATOM     13  HG1 CYS X   1      -4.188   0.833   1.021  1.00  0.00      1    H
+END

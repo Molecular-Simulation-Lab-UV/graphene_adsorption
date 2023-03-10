@@ -1,0 +1,13 @@
+@sys	US_aa
+@bin	/home/rhonorato/opt/md++-1.4.0/bin/md
+@version	md++
+@dir	/home/rhonorato/US_aa/Proline/aa/r1_050
+@files
+  topo	../../Proline_aa_graphene_54a8.top
+  input	aa_US.imd
+  coord	../../Proline_aa_graphene_h2o_54a8.cnf
+  posresspec	../../Proline_aa_graphene_h2o_54a8.por
+  refpos	../../Proline_aa_graphene_h2o_54a8.rpr
+  disres	../Proline_aa_graphene_h2o_54a8_1_050.dsr
+@template	/home/rhonorato/US_aa/mkscript_mms_leftraru_openMP.lib
+@script	1 25

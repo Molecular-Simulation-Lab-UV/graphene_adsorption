@@ -1,0 +1,13 @@
+@sys	US_aa
+@bin	/home/rhonorato/opt/md++-1.4.0/bin/md
+@version	md++
+@dir	/home/rhonorato/US_aa/Lysine/aa/r1_400
+@files
+  topo	../../Lysine_aa_graphene_54a8.top
+  input	aa_US.imd
+  coord	../../Lysine_aa_graphene_h2o_54a8.cnf
+  posresspec	../../Lysine_aa_graphene_h2o_54a8.por
+  refpos	../../Lysine_aa_graphene_h2o_54a8.rpr
+  disres	../Lysine_aa_graphene_h2o_54a8_1_400.dsr
+@template	/home/rhonorato/US_aa/mkscript_mms_leftraru_openMP.lib
+@script	1 25

@@ -1,0 +1,13 @@
+@sys	US_aa
+@bin	/home/rhonorato/opt/md++-1.4.0/bin/md
+@version	md++
+@dir	/home/rhonorato/US_aa/Glutamic_Acid_H+/aa/r0_800
+@files
+  topo	../../Glutamic_Acid_H+_aa_graphene_54a8.top
+  input	aa_US.imd
+  coord	../../Glutamic_Acid_H+_aa_graphene_h2o_54a8.cnf
+  posresspec	../../Glutamic_Acid_H+_aa_graphene_h2o_54a8.por
+  refpos	../../Glutamic_Acid_H+_aa_graphene_h2o_54a8.rpr
+  disres	../Glutamic_Acid_H+_aa_graphene_h2o_54a8_0_800.dsr
+@template	/home/rhonorato/US_aa/mkscript_mms_leftraru_openMP.lib
+@script	1 25

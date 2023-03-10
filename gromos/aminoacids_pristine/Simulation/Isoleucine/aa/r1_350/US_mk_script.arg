@@ -1,0 +1,13 @@
+@sys	US_aa
+@bin	/home/rhonorato/opt/md++-1.4.0/bin/md
+@version	md++
+@dir	/home/rhonorato/US_aa/Isoleucine/aa/r1_350
+@files
+  topo	../../Isoleucine_aa_graphene_54a8.top
+  input	aa_US.imd
+  coord	../../Isoleucine_aa_graphene_h2o_54a8.cnf
+  posresspec	../../Isoleucine_aa_graphene_h2o_54a8.por
+  refpos	../../Isoleucine_aa_graphene_h2o_54a8.rpr
+  disres	../Isoleucine_aa_graphene_h2o_54a8_1_350.dsr
+@template	/home/rhonorato/US_aa/mkscript_mms_leftraru_openMP.lib
+@script	1 25

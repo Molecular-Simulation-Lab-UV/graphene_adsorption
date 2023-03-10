@@ -1,0 +1,13 @@
+@sys	US_aa
+@bin	/opt/md++1.41/bin/md
+@version	md++
+@dir	/home1/mbarria/AA_GO25US/Phenylalanine/aa/r0_400
+@files
+  topo	../../Phenylalanine_aa_graphene_54a8.top
+  input	aa_US.imd
+  coord	../../Phenylalanine_aa_graphene_h2o_54a8.cnf
+  posresspec	../../Phenylalanine_aa_graphene_h2o_54a8.por
+  refpos	../../Phenylalanine_aa_graphene_h2o_54a8.rpr
+  disres	../Phenylalanine_aa_graphene_h2o_54a8_0_400.dsr
+@template	/home1/mbarria/AA_GO25US/mkscript_mms_leftraru_openMP.lib
+@script	1 25

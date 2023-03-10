@@ -1,0 +1,13 @@
+@sys	US_aa
+@bin	/home/rhonorato/opt/md++-1.4.0/bin/md
+@version	md++
+@dir	/home/rhonorato/US_aa/Tyrosine/aa/r1_100
+@files
+  topo	../../Tyrosine_aa_graphene_54a8.top
+  input	aa_US.imd
+  coord	../../Tyrosine_aa_graphene_h2o_54a8.cnf
+  posresspec	../../Tyrosine_aa_graphene_h2o_54a8.por
+  refpos	../../Tyrosine_aa_graphene_h2o_54a8.rpr
+  disres	../Tyrosine_aa_graphene_h2o_54a8_1_100.dsr
+@template	/home/rhonorato/US_aa/mkscript_mms_leftraru_openMP.lib
+@script	1 25

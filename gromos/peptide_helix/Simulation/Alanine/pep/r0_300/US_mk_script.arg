@@ -1,0 +1,13 @@
+@sys	US_pep
+@bin	/opt/gromos/md++-1.5.0_gcc-8.5.0/bin/md
+@version	md++
+@dir	/home/mbarria/AA_GO0US_Helix/Alanine/pep/r0_300
+@files
+  topo	../../Alanine_pep_graphene_54a8.top
+  input	pep_US.imd
+  coord	../../Alanine_pep_graphene_h2o_54a8.cnf
+  posresspec	../../Alanine_pep_graphene_h2o_54a8.por
+  refpos	../../Alanine_pep_graphene_h2o_54a8.rpr
+  disres	../Alanine_pep_graphene_h2o_54a8_0_300.dsr
+@template	/home/mbarria/AA_GO0US_Helix/mkscript_mms_donelias_openMP.lib
+@script	1 100

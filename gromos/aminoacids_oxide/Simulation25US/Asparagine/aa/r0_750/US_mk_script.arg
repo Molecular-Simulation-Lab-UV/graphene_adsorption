@@ -1,0 +1,13 @@
+@sys	US_aa
+@bin	/opt/md++1.41/bin/md
+@version	md++
+@dir	/home1/mbarria/AA_GO25US/Asparagine/aa/r0_750
+@files
+  topo	../../Asparagine_aa_graphene_54a8.top
+  input	aa_US.imd
+  coord	../../Asparagine_aa_graphene_h2o_54a8.cnf
+  posresspec	../../Asparagine_aa_graphene_h2o_54a8.por
+  refpos	../../Asparagine_aa_graphene_h2o_54a8.rpr
+  disres	../Asparagine_aa_graphene_h2o_54a8_0_750.dsr
+@template	/home1/mbarria/AA_GO25US/mkscript_mms_leftraru_openMP.lib
+@script	1 25

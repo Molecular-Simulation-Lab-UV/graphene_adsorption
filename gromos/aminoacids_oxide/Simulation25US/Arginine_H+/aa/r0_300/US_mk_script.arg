@@ -1,0 +1,13 @@
+@sys	US_aa
+@bin	/opt/md++1.41/bin/md
+@version	md++
+@dir	/home1/mbarria/AA_GO25US/Arginine_H+/aa/r0_300
+@files
+  topo	../../Arginine_H+_aa_Cl_graphene_54a8.top
+  input	aa_US.imd
+  coord	../../Arginine_H+_aa_1Cl_graphene_h2o_54a8.cnf
+  posresspec	../../Arginine_H+_aa_1Cl_graphene_h2o_54a8.por
+  refpos	../../Arginine_H+_aa_1Cl_graphene_h2o_54a8.rpr
+  disres	../Arginine_H+_aa_1Cl_graphene_h2o_54a8_0_300.dsr
+@template	/home1/mbarria/AA_GO25US/mkscript_mms_leftraru_openMP.lib
+@script	1 25
