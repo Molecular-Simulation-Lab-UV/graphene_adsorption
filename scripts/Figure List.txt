@@ -1,0 +1,18 @@
+Main Figures:
+
+  1 and 2: Systems. Made with GIMP, not with Python.
+  3: dA over pristine graphene
+  4: dE and TdS over pristine graphene
+  5: Amino acid interaction energies
+  6: Water interaction energies
+
+Supplementary Fingers:
+
+  1: PMFs over pristine graphene
+  2: PMFs over oxidized graphene
+  3: PMFs of 5-Ala
+  4: AA-Graph Energies
+  5: AA-H2O Energies
+  6: H2O-Graph Energies
+  7: H2O-H2O Energies
+  8: Internal Amino acid energies
