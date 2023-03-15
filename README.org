@@ -1,10 +1,19 @@
-* graphene_adsorption_paper
-Paper regarding adsorption of amino acids onto graphene.
+* Free-energy calculations of amino acid adsorption over pristine graphene
 
-Structured in branches for each section (i.e. introduction,
-methods...). Commits every paragraph and when stopping for the day.
 
-** Structure
+** Abstract
+
+There is a still growing interest in graphene interactions with proteins; both for its possible biological applications and due to concerns over detrimental effects at the cellular level. 
+As with any process involving proteins, an understanding from amino acid composition is desirable. 
+In this work we systematically studied the adsorption process of amino acids onto pristine graphene via rigurous free-energy calculations.
+We characterized the free energy, potential energy, and entropy of adsorption of all proteinogenic amino acids.
+The energetic components were further separated into pair interaction contributions.
+A linear correlation was found between the free-energy and the Solvent Accessible Surface Area  change  during adsorption($\Delta$SASA$^{ads}$).
+Free energies over pristine graphene were compared with adsorption onto graphene oxide (GO), finding an almost complete loss of the favorability of amino acid adsorption onto graphene.
+Finally, the correlation with the $\Delta$SASA$^{ads}$ was used to successfully predict the free-energy of adsorption of penta-L-alanine in two different structural states.
+Due to the relative ease of calculating the $\Delta$SASA$^{ads}$ compared to free-energy calculations, it could prove a cost-effective predictor of the free-energy of adsorption for proteins onto non-polar surfaces.
+
+** This repository
 
 - data: data used for figures, scripts and tables may reference these files
   + 5ala: PMF(\xi) of peptides
