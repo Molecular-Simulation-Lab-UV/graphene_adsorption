@@ -7,17 +7,13 @@ methods...). Commits every paragraph and when stopping for the day.
 ** Structure
 
 - data: data used for figures, scripts and tables may reference these files
+  + 5ala: PMF(\xi) of peptides
+  + glutamic: analysis of gluamate intramolecular interactions
   + pmfs: PMF(\xi) for all amino acids over graphene
-  + tables: .csv files for
-    * Free energy decomposition (\Delta A, \Delta E, T\Delta S)
-    * Energy decomposition (into VdW and CRF)
-    * Entropy (schlitter/quasi-harmonic) and Diffusion coefficientes
-    * SASA
+  + tables: .csv files for different energetic components
+  + unbias: unbiased energies
 - figures: For all figures
-- paper: .tex files for the paper
-  + main.tex: LaTeX file
-  + refs.bib: Reference file
+- *gromos:* Input files for GROMOS (1.4.0)
+- paper: .tex files for the article
 - scripts: any relevant script for the creation of figures (there is
   also a "copy files" script but it is only expected to work on my computer)
-- tables: any tables as separate .tex files to remove clutter
-  in main.tex
